@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/calculator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.eci.cosw.calculator.calculator">
+
+
+    <TableLayout
+        android:id="@+id/buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="19dp"
+        android:gravity="top|center_horizontal"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input"
+        tools:ignore="MissingConstraints">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btenter"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter"
+                tools:text="Enter" />
+
+            <Button
+                android:id="@+id/bttan"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TAN"
+                tools:text="TAN" />
+
+            <Button
+                android:id="@+id/btsin"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SIN"
+                tools:text="SIN" />
+
+            <Button
+                android:id="@+id/btcos"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="COS"
+                tools:text="COS" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btsig"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+/-"
+                tools:text="+/-" />
+
+            <Button
+                android:id="@+id/btdel"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AC"
+                tools:text="AC" />
+
+            <Button
+                android:id="@+id/btdellast"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C"
+                tools:text="C" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/bt7"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:text="7"
+                android:tag="7"
+                android:onClick="ButtonNumber"
+                tools:text="7" />
+
+            <Button
+                android:id="@+id/bt8"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="ButtonNumber"
+                android:tag="8"
+                android:text="8"
+                tools:text="8" />
+
+            <Button
+                android:id="@+id/bt9"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="63dp"
+                android:layout_height="wrap_content"
+                android:onClick="ButtonNumber"
+                android:tag="9"
+                android:text="9"
+                tools:text="9" />
+
+            <Button
+                android:id="@+id/btadd"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="operationsBasic"
+                android:tag="+"
+                android:text="+"
+                tools:text="+" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/bt4"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="ButtonNumber"
+                android:tag="4"
+                android:text="4"
+                tools:text="4" />
+
+            <Button
+                android:id="@+id/bt5"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="ButtonNumber"
+                android:tag="5"
+                android:text="5"
+                tools:text="5" />
+
+            <Button
+                android:id="@+id/bt6"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="ButtonNumber"
+                android:tag="6"
+                android:text="6"
+                tools:text="6" />
+
+            <Button
+                android:id="@+id/btsust"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="operationsBasic"
+                android:tag="-"
+                android:text="-"
+                tools:text="-" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/bt1"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="ButtonNumber"
+                android:tag="1"
+                android:text="1"
+                tools:text="1" />
+
+            <Button
+                android:id="@+id/bt2"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="ButtonNumber"
+                android:tag="2"
+                android:text="2"
+                tools:text="2" />
+
+            <Button
+                android:id="@+id/bt3"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="ButtonNumber"
+                android:tag="3"
+                android:text="3"
+                tools:text="3" />
+
+            <Button
+                android:id="@+id/btmult"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="operationsBasic"
+                android:tag="*"
+                android:text="*"
+                tools:text="*" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btpoint"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="ButtonNumber"
+                android:tag="."
+                android:text=","
+                tools:text="," />
+
+            <Button
+                android:id="@+id/bt0"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="ButtonNumber"
+                android:tag="0"
+                android:text="0"
+                tools:text="0" />
+
+            <Button
+                android:id="@+id/btequal"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="="
+                tools:text="=" />
+
+            <Button
+                android:id="@+id/btdiv"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="operationsBasic"
+                android:tag="/"
+                android:text="/"
+                tools:text="/" />
+        </TableRow>
+    </TableLayout>
+
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="341dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:inputType="number|numberSigned|numberDecimal"
+        android:textAlignment="textEnd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/operations"
+        tools:editable="false"
+        tools:text="0" />
+
+    <EditText
+        android:id="@+id/operations"
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="text"
+        android:selectAllOnFocus="false"
+        android:singleLine="false"
+        android:text=" "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:editable="false"
+        tools:text=" " />
+
+</android.support.constraint.ConstraintLayout>
